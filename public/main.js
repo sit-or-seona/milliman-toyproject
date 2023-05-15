@@ -13,6 +13,7 @@ function createWindow() {
       enableRemoteModule: true,
       devTools: isDev,
     },
+    frame: false,
   });
 
   mainWindow.loadURL(
