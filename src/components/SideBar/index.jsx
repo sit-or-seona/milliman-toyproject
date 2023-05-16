@@ -1,13 +1,18 @@
 import React from "react";
 import * as S from "./style";
+import Collapse from "./Collapse";
+import { categoryData } from "./categoryData";
 
 export default function SideBar() {
   return (
     <S.SideBar>
-      <S.CustomCollapse bordered={false}>
-        <S.CustomPanel header="Category 1" key="1"></S.CustomPanel>
-        <S.CustomPanel header="Category 2" key="2"></S.CustomPanel>
-      </S.CustomCollapse>
+      {categoryData.map((category) => {
+        return (
+          <Collapse key={category.id} header={category.name}>
+            {category.children}
+          </Collapse>
+        );
+      })}
     </S.SideBar>
   );
 }
