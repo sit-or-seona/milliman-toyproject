@@ -5,22 +5,13 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import { styled } from "styled-components";
 
 export const CustomTreeView = styled(TreeView)`
-  height: 277px;
-  padding: 7px;
-  overflow-y: auto;
-  font-family: inherit;
-
   .css-1g86id8-MuiTreeItem-content .MuiTreeItem-iconContainer svg {
     font-size: 15px;
   }
 
-  .MuiTreeItem-content {
-    margin-bottom: 4px;
-    padding: 0 3px;
-  }
-
   .css-1g86id8-MuiTreeItem-content .MuiTreeItem-label {
     font-family: inherit;
+    padding: 2px;
   }
 `;
 
