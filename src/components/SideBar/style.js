@@ -10,10 +10,6 @@ export const SideBar = styled.aside`
   width: 230px;
   height: calc(100% - 30px);
   border-right: 1px solid ${({ theme }) => theme.color.mediumGray};
-
-  .bottom-handle {
-    bottom: 0 !important;
-  }
 `;
 
 export const CustomPanel = styled(Panel)`
