@@ -25,6 +25,6 @@ export const CustomPanel = styled(Panel)`
   }
 
   .ant-collapse-content-box {
-    margin-bottom: 16px;
+    padding: 0 !important;
   }
 `;

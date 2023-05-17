@@ -3,6 +3,8 @@ const color = {
   gray: "#777777",
   mediumGray: "#e3e3e3",
   lightGray: "#f3f3f3",
+  yellow: "#ffc25c",
+  blue: "#90caf9",
 };
 
 const theme = {
