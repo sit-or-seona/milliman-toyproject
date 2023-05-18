@@ -9,7 +9,7 @@ export default function TreeView({ children }) {
         key={nodes.id}
         nodeId={nodes.id}
         label={nodes.name}
-        icon={nodes.id.length > 3 && <S.ColoredFileIcon />}
+        icon={nodes.type === "file" && <S.ColoredFileIcon />}
       >
         {Array.isArray(nodes.children)
           ? nodes.children.map((node) => renderTree(node))
