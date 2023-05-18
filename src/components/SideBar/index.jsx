@@ -12,9 +12,13 @@ export default function SideBar() {
       <Collapse bordered={false}>
         {categoryData.map((category) => (
           <S.CustomPanel key={category.id} header={category.name}>
-            <Resizer>
+            {category !== categoryData[categoryData.length - 1] ? (
+              <Resizer>
+                <TreeView>{category.children}</TreeView>
+              </Resizer>
+            ) : (
               <TreeView>{category.children}</TreeView>
-            </Resizer>
+            )}
           </S.CustomPanel>
         ))}
       </Collapse>
