@@ -18,6 +18,8 @@ export const Title = styled.h1`
 export const TitleBarButtons = styled.div`
   position: absolute;
   right: 4px;
+  -webkit-app-region: no-drag;
+
   button {
     margin: 0 4px;
     svg {

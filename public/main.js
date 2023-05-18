@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
 
@@ -12,6 +12,7 @@ function createWindow() {
       nodeIntegration: true,
       enableRemoteModule: true,
       devTools: isDev,
+      contextIsolation: false,
     },
     frame: false,
   });
@@ -31,16 +32,32 @@ function createWindow() {
   mainWindow.focus();
 }
 
-app.on("ready", createWindow);
+app.whenReady().then(() => {
+  createWindow();
 
-app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
-    app.quit();
-  }
-});
+  app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") {
+      app.quit();
+    }
+  });
 
-app.on("activate", () => {
-  if (mainWindow === null) {
-    createWindow();
-  }
+  app.on("activate", () => {
+    if (mainWindow === null) createWindow();
+  });
+
+  ipcMain.on("minimizeApp", () => {
+    mainWindow?.minimize();
+  });
+
+  ipcMain.on("maximizeApp", () => {
+    if (mainWindow?.isMaximized()) {
+      mainWindow?.unmaximize();
+    } else {
+      mainWindow?.maximize();
+    }
+  });
+
+  ipcMain.on("closeApp", () => {
+    mainWindow?.close();
+  });
 });
