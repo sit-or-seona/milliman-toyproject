@@ -45,15 +45,15 @@ $   npm start
 
 |                                                       초기 화면                                                        |
 | :--------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/6992ec66-2d86-4a83-b776-a26a460dea0e"/> |
+| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/804efcfb-675c-4f54-8c49-836277c533e4"/> |
 
 |                                        Side bar의 Collpase와 TreeView 구현 화면                                         |
 | :---------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/43631467-23ce-4d9a-a4a6-5b4e51d7749f" /> |
+| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/7ab15f25-26bd-4347-8e0e-7e2498779752" /> |
 
 |                                           마우스로 드래그 하여 Resize한 화면                                            |
 | :---------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/fe92ea3a-8899-43ac-ac39-58fcd400e674" /> |
+| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/ac8d6a9c-e818-490a-bb9e-257a3d26c067" /> |
 
 </div>
 
