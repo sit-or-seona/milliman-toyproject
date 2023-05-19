@@ -13,6 +13,7 @@ function createWindow() {
       enableRemoteModule: true,
       devTools: isDev,
       contextIsolation: false,
+      preload: path.join(__dirname, "preload.js"),
     },
     frame: false,
   });
