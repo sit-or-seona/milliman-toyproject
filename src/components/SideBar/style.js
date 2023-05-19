@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Collapse } from "antd";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const { Panel } = Collapse;
 
@@ -21,6 +22,7 @@ export const CustomPanel = styled(Panel)`
     background-color: ${({ theme }) => theme.color.mediumGray};
 
     .ant-collapse-header-text {
+      font-family: "Inter", sans-serif;
       line-height: 23px;
       font-size: 10px;
       color: ${({ theme }) => theme.color.black};
@@ -28,6 +30,16 @@ export const CustomPanel = styled(Panel)`
   }
 
   .ant-collapse-content-box {
+    font-family: "Inter", sans-serif;
     padding: 0 !important;
   }
+
+  .ant-collapse-expand-icon {
+    padding-inline-end: 3px !important;
+  }
+`;
+
+export const CollapseIcon = styled(PlayArrowIcon)`
+  transform: rotate(${(props) => props.rotate}deg);
+  padding: 1px;
 `;

@@ -9,7 +9,12 @@ export default function SideBar() {
   return (
     <S.SideBar>
       <h2 className="sr-only">Side Bar</h2>
-      <Collapse bordered={false}>
+      <Collapse
+        bordered={false}
+        expandIcon={({ isActive }) => (
+          <S.CollapseIcon rotate={isActive ? 90 : 0} />
+        )}
+      >
         {categoryData.map((category) => (
           <S.CustomPanel key={category.id} header={category.name}>
             {category !== categoryData[categoryData.length - 1] ? (
