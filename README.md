@@ -2,12 +2,12 @@
 
 ## 해결 과제
 
-**일렉트론 기반의 Side bar 틀 제작**
+**일렉트론 앱의 Side bar 제작**
 
 1️⃣ 초기 화면 구현 <br>
-2️⃣ antd의 Collapse를 활용한 카테고리 구현 <br>
-3️⃣ material-ui의 TreeView를 활용한 카테고리 내부 구현 <br>
-4️⃣ re-resizable의 Resizable을 활용한 카테고리 크기 조절 기능 구현 <br>
+2️⃣ antd의 Collapse를 활용해 카테고리 구현 <br>
+3️⃣ material-ui의 TreeView를 활용해 카테고리 내부 구현 <br>
+4️⃣ re-resizable의 Resizable을 활용해 카테고리 크기 조절 기능 구현 <br>
 5️⃣ _(추가)_ Title bar의 window control 버튼 기능 구현
 
 <br>
@@ -17,7 +17,8 @@
 ```
 $   git clone https://github.com/sit-or-seona/milliman-toyproject.git
 $   npm install
-$   npm start
+$   npm start             -> 일렉트론 실행
+$   npm run react-start   -> 브라우저 실행
 ```
 
 <br>
@@ -104,10 +105,11 @@ $   npm start
 
 <br>
 
-## 추가 작업 예정 사항
+## 추가 작업 사항
 
+- [x] Title bar의 window control 버튼 기능 구현
+- [x] 브라우저에서 실행시 발생하는 `window.require is not a function` 에러 해결
 - [ ] Category 1 크기를 최대로 키울시 Category 2가 화면 밖으로 벗어나는 현상 해결
-- [ ] 브라우저에서 실행시 발생하는 `window.require is not a function` 에러 해결
 - [ ] Side bar 너비 조절 기능 구현
 
 <br>
