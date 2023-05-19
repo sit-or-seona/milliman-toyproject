@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Milliman ToyProject
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 해결 과제
 
-## Available Scripts
+**일렉트론 기반의 Side bar 틀 제작**
 
-In the project directory, you can run:
+1️⃣ 초기 화면 구현 <br>
+2️⃣ antd의 Collapse를 활용한 카테고리 구현 <br>
+3️⃣ material-ui의 TreeView를 활용한 카테고리 내부 구현 <br>
+4️⃣ re-resizable의 Resizable을 활용한 카테고리 크기 조절 기능 구현 <br>
+5️⃣ _(추가)_ Title bar의 window control 버튼 기능 구현
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 실행 방법
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+$   git clone https://github.com/sit-or-seona/milliman-toyproject.git
+$   npm install
+$   npm start
+```
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 개발 환경
 
-### `npm run build`
+- 환경: JavaScript, Node.js(v14.16.0), Electron, React
+- 패키지: react, electron, re-resizable, antd, material-ui
+- 추가 패키지
+  - 일렉트론 관련: electron-is-dev, electron-builder, concurrently, wait-on, cross-env
+  - UI 관련: styled-components, styled-reset, material-ui/icon
+- 일정 관리: [Notion](https://seonabang.notion.site/Milliman-Toy-Project-85b8982cf89e4f80ba33ceffb234309d)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 진행 기간
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2023.05.15 - 2023.05.19 (5days)
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 구현 화면
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<div align="center">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+|                                                       초기 화면                                                        |
+| :--------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/6992ec66-2d86-4a83-b776-a26a460dea0e"/> |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+|                                        Side bar의 Collpase와 TreeView 구현 화면                                         |
+| :---------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/43631467-23ce-4d9a-a4a6-5b4e51d7749f" /> |
 
-## Learn More
+|                                           마우스로 드래그 하여 Resize한 화면                                            |
+| :---------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/sit-or-seona/milliman-toyproject/assets/106213724/fe92ea3a-8899-43ac-ac39-58fcd400e674" /> |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+</div>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+## 커밋 컨벤션
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+#   feat      : 새로운 기능 추가
+#   fix       : 버그 수정
+#   design    : CSS 등 사용자 UI 디자인 추가 및 수정
+#   refactor  : 리팩토링
+#   style     : 비즈니스 로직과 연관 없는 코드 형식 수정
+#   docs      : 문서 추가, 수정, 삭제
+#   chore     : 환경설정 및 기타 변경사항
+#   rename    : 파일 혹은 폴더명을 수정하거나 이동
+#   remove    : 파일 삭제
+```
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 폴더 구조
 
-### Making a Progressive Web App
+```
+├── 📁 src
+│   ├── App.js
+│   ├── index.js
+│   ├── 📁 components
+│   │   ├── 📁 SideBar
+│   │   │   ├── 📁 Resizer
+│   │   │   │   └── index.jsx
+│   │   │   ├── 📁 TreeView
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── style.js
+│   │   │   ├── index.jsx
+│   │   │   ├── style.js
+│   │   │   └── categoryData.js
+│   │   └── 📁 TitleBar
+│   │   │   ├── 📁 TitleBarButton
+│   │   │   │   └── index.jsx
+│   │   │   ├── index.jsx
+│   │   │   └── style.js
+│   └── 📁 styles
+│       ├── globalStyles.jsx
+│       └── theme.jsx
+...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+## 추가 작업 예정 사항
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [ ] Category 1 크기를 최대로 키울시 Category 2가 화면 밖으로 벗어나는 현상 해결
+- [ ] 브라우저에서 실행시 발생하는 `window.require is not a function` 에러 해결
+- [ ] Side bar 너비 조절 기능 구현
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
