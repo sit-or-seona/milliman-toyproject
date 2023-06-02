@@ -8,7 +8,10 @@
 2️⃣ antd의 Collapse를 활용해 카테고리 구현 <br>
 3️⃣ material-ui의 TreeView를 활용해 카테고리 내부 구현 <br>
 4️⃣ re-resizable의 Resizable을 활용해 카테고리 크기 조절 기능 구현 <br>
-5️⃣ _(추가)_ Title bar의 window control 버튼 기능 구현
+5️⃣ Title bar의 window control 버튼 기능 구현 <br>
+6️⃣ _(추가)_ Resizable 컴포넌트의 핸들 위치가 고정되지 않는 버그 해결 <br>
+7️⃣ _(추가)_ Resizable 컴포넌트의 높이를 영역 내의 가용 최대 높이로 변경 <br>
+8️⃣ _(추가)_ Collapse 컴포넌트의 active 패널 개수를 1개로 제한
 
 <br>
 
@@ -36,7 +39,10 @@ $   npm run react-start   -> 브라우저 실행
 
 ## 진행 기간
 
-2023.05.15 - 2023.05.19 (5days)
+|      내용      |              기간               |
+| :------------: | :-----------------------------: |
+| 프로젝트 완성  | 2023.05.15 - 2023.05.19 (5days) |
+| 추가 과제 해결 | 2023.06.01 - 2023.06.02 (2days) |
 
 <br>
 
