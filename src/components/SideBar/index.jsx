@@ -25,7 +25,7 @@ export default function SideBar() {
         {categoryData.map((category) => (
           <S.CustomPanel key={category.id} header={category.name}>
             {category !== categoryData[categoryData.length - 1] ? (
-              <Resizer>
+              <Resizer count={categoryData.length - 1}>
                 <TreeView>{category.children}</TreeView>
               </Resizer>
             ) : (

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Resizable } from "re-resizable";
 
-export default function Resizer({ children }) {
+export default function Resizer({ children, count }) {
   const [height, setHeight] = useState(0);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const minusHeight = count * 23 + 56;
 
   window.onresize = () => {
     setWindowHeight(window.innerHeight);
   };
 
   useEffect(() => {
-    setHeight(windowHeight - 76);
-  }, [windowHeight]);
+    setHeight(windowHeight - minusHeight);
+  }, [windowHeight, minusHeight]);
 
   return (
     <Resizable
