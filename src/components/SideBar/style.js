@@ -30,6 +30,7 @@ export const CustomPanel = styled(Panel)`
   }
 
   .ant-collapse-content-box {
+    position: relative;
     font-family: "Inter", sans-serif;
     padding: 0 !important;
   }

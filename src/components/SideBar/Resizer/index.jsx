@@ -27,7 +27,7 @@ export default function Resizer({ children }) {
           bottom: 0,
         },
       }}
-      style={{ overflowY: "auto" }}
+      style={{ overflowY: "auto", position: "static" }}
     >
       {children}
     </Resizable>
