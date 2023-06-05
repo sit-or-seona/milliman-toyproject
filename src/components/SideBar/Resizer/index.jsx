@@ -6,12 +6,15 @@ export default function Resizer({ children, count }) {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const minusHeight = count * 23 + 53;
 
-  window.onresize = () => {
-    setWindowHeight(window.innerHeight);
-  };
-
   useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+    window.addEventListener("resize", handleWindowResize);
     setHeight(windowHeight - minusHeight);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
   }, [windowHeight, minusHeight]);
 
   return (
