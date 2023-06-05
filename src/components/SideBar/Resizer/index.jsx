@@ -4,7 +4,7 @@ import { Resizable } from "re-resizable";
 export default function Resizer({ children, count }) {
   const [height, setHeight] = useState(0);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const minusHeight = count * 23 + 56;
+  const minusHeight = count * 23 + 53;
 
   window.onresize = () => {
     setWindowHeight(window.innerHeight);
